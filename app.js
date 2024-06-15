@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateProfile(token) {
         const updatedData = {
-            name: 'New Name', // Replace with actual data
-            email: 'newemail@example.com' // Replace with actual data
+            name: 'New Name', 
+            email: 'newemail@example.com'
         };
 
         fetch('http://localhost:7777/users/1', {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .then(data => {
             alert('Profile updated successfully.');
-            fetchProfile(token); // Refresh profile data
+            fetchProfile(token); 
         })
         .catch(error => {
             console.error('Error updating profile:', error);
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Automatically load profile on page load if token exists
+    
     if (token) {
         fetchProfile(token);
     } else {
